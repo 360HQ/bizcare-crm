@@ -1,0 +1,24 @@
+{
+  "name": "@memorial-registry/auth",
+  "type": "module",
+  "exports": {
+    ".": {
+      "default": "./src/index.ts"
+    },
+    "./*": {
+      "default": "./src/*.ts"
+    }
+  },
+  "scripts": {},
+  "dependencies": {
+    "@memorial-registry/db": "workspace:*",
+    "@memorial-registry/env": "workspace:*",
+    "better-auth": "catalog:",
+    "dotenv": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@memorial-registry/config": "workspace:*",
+    "typescript": "catalog:"
+  }
+}

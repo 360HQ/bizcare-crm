@@ -1,0 +1,6 @@
+{
+  "extends": "@memorial-registry/config/tsconfig.base.json",
+  "compilerOptions": {
+    "strictNullChecks": true
+  }
+}
