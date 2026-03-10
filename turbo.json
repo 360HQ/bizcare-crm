@@ -5,7 +5,8 @@
     "build": {
       "dependsOn": ["^build"],
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
-      "outputs": ["dist/**"]
+      "outputs": ["dist/**"],
+      "passThroughEnv": ["VITE_SERVER_URL", "VITE_PUBLIC_ORG_ID"]
     },
     "lint": {
       "dependsOn": ["^lint"]

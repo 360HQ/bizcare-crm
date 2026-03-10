@@ -24,6 +24,7 @@
     "zod": "catalog:"
   },
   "devDependencies": {
+    "better-auth": "catalog:",
     "@bizcare-crm/config": "workspace:*",
     "drizzle-kit": "^0.31.8",
     "typescript": "catalog:"

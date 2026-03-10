@@ -159,6 +159,7 @@
       },
       "devDependencies": {
         "@bizcare-crm/config": "workspace:*",
+        "better-auth": "catalog:",
         "drizzle-kit": "^0.31.8",
         "typescript": "catalog:",
       },

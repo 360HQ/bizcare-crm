@@ -27,6 +27,9 @@ jobs:
 
       - name: Build
         run: bun run build
+        env:
+          VITE_SERVER_URL: ${{ vars.VITE_SERVER_URL }}
+          VITE_PUBLIC_ORG_ID: ${{ vars.VITE_PUBLIC_ORG_ID }}
 
       - name: Deploy
         run: bun run deploy

@@ -1,20 +1,27 @@
+import { resolve } from "node:path";
 import dotenv from "dotenv";
-dotenv.config({ path: "../../apps/server/.env" });
-import { db } from "./index";
-import {
-	contact,
-	memorial,
-	memorialCategory,
-	organization,
-	organizationMember,
-	pipeline,
-	pipelineStage,
-	record,
-	user,
-} from "./schema";
+
+// Load environment variables from the server's .env file
+dotenv.config({
+	path: resolve(process.cwd(), "../../apps/server/.env"),
+	override: true,
+});
 
 async function main() {
 	console.log("🌱 Seeding database...");
+
+	const { db } = await import("./index");
+	const {
+		contact,
+		memorial,
+		memorialCategory,
+		organization,
+		organizationMember,
+		pipeline,
+		pipelineStage,
+		record,
+		user,
+	} = await import("./schema");
 
 	// 1. Create Organization
 	const orgId = "org_dev_123";
@@ -71,7 +78,7 @@ async function main() {
 		.values({
 			id: "mem_dev_001",
 			organizationId: orgId,
-			userId: userId,
+			userId,
 			role: "member",
 		})
 		.onConflictDoNothing();
@@ -119,7 +126,7 @@ async function main() {
 			.insert(pipelineStage)
 			.values({
 				id: stage.id,
-				pipelineId: pipelineId,
+				pipelineId,
 				name: stage.name,
 				position: stage.position,
 			})
@@ -161,8 +168,8 @@ async function main() {
 		.values({
 			id: "mem_dev_001",
 			organizationId: orgId,
-			recordId: recordId,
-			categoryId: categoryId,
+			recordId,
+			categoryId,
 			nameEn: "Jane Smith",
 			nameZh: "李四",
 			location: "Garden A - Plot 123",
