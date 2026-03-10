@@ -1,5 +1,5 @@
 {
-  "name": "@memorial-registry/auth",
+  "name": "@bizcare-crm/auth",
   "type": "module",
   "exports": {
     ".": {
@@ -11,14 +11,14 @@
   },
   "scripts": {},
   "dependencies": {
-    "@memorial-registry/db": "workspace:*",
-    "@memorial-registry/env": "workspace:*",
+    "@bizcare-crm/db": "workspace:*",
+    "@bizcare-crm/env": "workspace:*",
     "better-auth": "catalog:",
     "dotenv": "catalog:",
     "zod": "catalog:"
   },
   "devDependencies": {
-    "@memorial-registry/config": "workspace:*",
+    "@bizcare-crm/config": "workspace:*",
     "typescript": "catalog:"
   }
 }

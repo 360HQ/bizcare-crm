@@ -1,5 +1,5 @@
 {
-  "name": "@bizcare-crm/api",
+  "name": "@bizcare-crm/core",
   "type": "module",
   "exports": {
     ".": {
@@ -11,12 +11,12 @@
   },
   "scripts": {},
   "dependencies": {
-    "@bizcare-crm/core": "workspace:*",
-    "@bizcare-crm/memorial": "workspace:*",
     "@bizcare-crm/trpc": "workspace:*",
-    "@trpc/client": "catalog:",
+    "@bizcare-crm/db": "workspace:*",
+    "@bizcare-crm/env": "workspace:*",
     "@trpc/server": "catalog:",
     "dotenv": "catalog:",
+    "drizzle-orm": "^0.45.1",
     "zod": "catalog:"
   },
   "devDependencies": {

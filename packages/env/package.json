@@ -1,5 +1,5 @@
 {
-  "name": "@memorial-registry/env",
+  "name": "@bizcare-crm/env",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -13,8 +13,8 @@
     "zod": "catalog:"
   },
   "devDependencies": {
-    "@memorial-registry/config": "workspace:*",
-    "@memorial-registry/infra": "workspace:*",
+    "@bizcare-crm/config": "workspace:*",
+    "@bizcare-crm/infra": "workspace:*",
     "@types/node": "catalog:",
     "typescript": "catalog:"
   }

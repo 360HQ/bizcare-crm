@@ -1,0 +1,1 @@
+export { memorialModuleRouter } from "./routers";
