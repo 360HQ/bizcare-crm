@@ -1,3 +1,16 @@
+# TODO-Driven Workflow
+
+When the user says **"continue from TODO"**, **"pick up next task"**, or **"next TODO"**:
+1. Read `TODO.md` in the project root
+2. Find the first unchecked item (`- [ ]`) in the topmost active section
+3. Work on it
+4. Mark it as done (`- [x]`) when complete
+5. If the user says "continue", move to the next unchecked item
+
+Keep `TODO.md` updated as the source of truth for remaining work. Add new items as they're discovered during implementation.
+
+---
+
 # Ultracite Code Standards
 
 This project uses **Ultracite**, a zero-config preset that enforces strict code quality standards through automated formatting and linting.

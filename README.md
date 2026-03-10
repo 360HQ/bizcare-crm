@@ -1,4 +1,4 @@
-# memorial-registry
+# bizcare-crm
 
 This project was created with [Better-T-Stack](https://github.com/AmanVarshney01/create-better-t-stack), a modern TypeScript stack that combines React, TanStack Router, Hono, TRPC, and more.
 
@@ -62,8 +62,8 @@ For more details, see the guide on [Deploying to Cloudflare with Alchemy](https:
 
 ## Project Structure
 
-```
-memorial-registry/
+```text
+bizcare-crm/
 ├── apps/
 │   ├── web/         # Frontend application (React + TanStack Router)
 │   └── server/      # Backend API (Hono, TRPC)

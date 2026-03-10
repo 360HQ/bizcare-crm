@@ -1,14 +1,15 @@
 {
-  "name": "memorial-registry",
+  "name": "bizcare-crm",
   "private": true,
   "workspaces": {
     "packages": [
       "apps/*",
-      "packages/*"
+      "packages/*",
+      "packages/modules/*"
     ],
     "catalog": {
       "dotenv": "^17.2.2",
-      "zod": "^4.1.13",
+      "zod": "^3.25.76",
       "typescript": "^5",
       "@types/node": "^22.13.14",
       "@cloudflare/workers-types": "^4.20251213.0",
@@ -27,24 +28,24 @@
     "dev:native": "turbo -F native dev",
     "dev:web": "turbo -F web dev",
     "dev:server": "turbo -F server dev",
-    "db:push": "turbo -F @memorial-registry/db db:push",
-    "db:studio": "turbo -F @memorial-registry/db db:studio",
-    "db:generate": "turbo -F @memorial-registry/db db:generate",
-    "db:migrate": "turbo -F @memorial-registry/db db:migrate",
-    "deploy": "turbo -F @memorial-registry/infra deploy",
-    "destroy": "turbo -F @memorial-registry/infra destroy",
+    "db:push": "turbo -F @bizcare-crm/db db:push",
+    "db:studio": "turbo -F @bizcare-crm/db db:studio",
+    "db:generate": "turbo -F @bizcare-crm/db db:generate",
+    "db:migrate": "turbo -F @bizcare-crm/db db:migrate",
+    "deploy": "turbo -F @bizcare-crm/infra deploy",
+    "destroy": "turbo -F @bizcare-crm/infra destroy",
     "check": "ultracite check",
     "fix": "ultracite fix"
   },
   "dependencies": {
-    "@memorial-registry/env": "workspace:*",
+    "@bizcare-crm/env": "workspace:*",
     "dotenv": "catalog:",
     "zod": "catalog:"
   },
   "devDependencies": {
     "@biomejs/biome": "2.4.5",
     "@cloudflare/workers-types": "catalog:",
-    "@memorial-registry/config": "workspace:*",
+    "@bizcare-crm/config": "workspace:*",
     "@types/node": "catalog:",
     "turbo": "^2.8.12",
     "typescript": "catalog:",
