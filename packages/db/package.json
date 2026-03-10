@@ -1,5 +1,5 @@
 {
-  "name": "@memorial-registry/db",
+  "name": "@bizcare-crm/db",
   "type": "module",
   "exports": {
     ".": {
@@ -16,14 +16,14 @@
     "db:migrate": "drizzle-kit migrate"
   },
   "dependencies": {
-    "@memorial-registry/env": "workspace:*",
-    "@neondatabase/serverless": "^1.0.2",
+    "@bizcare-crm/env": "workspace:*",
     "dotenv": "catalog:",
+    "@neondatabase/serverless": "^1.0.2",
     "drizzle-orm": "^0.45.1",
     "zod": "catalog:"
   },
   "devDependencies": {
-    "@memorial-registry/config": "workspace:*",
+    "@bizcare-crm/config": "workspace:*",
     "drizzle-kit": "^0.31.8",
     "typescript": "catalog:"
   }
