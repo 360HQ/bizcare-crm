@@ -1,10 +1,6 @@
 import alchemy from "alchemy";
-import {
-	CloudflareStateStore,
-	R2Bucket,
-	Vite,
-	Worker,
-} from "alchemy/cloudflare";
+import { R2Bucket, Vite, Worker } from "alchemy/cloudflare";
+import { CloudflareStateStore } from "alchemy/state";
 import { config } from "dotenv";
 
 config({ path: "./.env" });
