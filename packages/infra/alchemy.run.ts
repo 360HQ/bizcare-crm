@@ -1,12 +1,25 @@
 import alchemy from "alchemy";
-import { R2Bucket, Vite, Worker } from "alchemy/cloudflare";
+import {
+	CloudflareStateStore,
+	R2Bucket,
+	Vite,
+	Worker,
+} from "alchemy/cloudflare";
 import { config } from "dotenv";
 
 config({ path: "./.env" });
 config({ path: "../../apps/web/.env" });
 config({ path: "../../apps/server/.env" });
 
-const app = await alchemy("bizcare-crm");
+const app = await alchemy("bizcare-crm", {
+	stateStore:
+		process.env.CI === "true"
+			? new CloudflareStateStore({
+					accountId: process.env.CLOUDFLARE_ACCOUNT_ID!,
+					apiToken: process.env.CLOUDFLARE_API_TOKEN!,
+				})
+			: undefined,
+});
 
 export const attachmentsBucket = await R2Bucket("attachments");
 
