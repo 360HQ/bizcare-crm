@@ -10,10 +10,11 @@ config({ path: "../../apps/server/.env" });
 const app = await alchemy("bizcare-crm", {
 	stateStore:
 		process.env.CI === "true"
-			? new CloudflareStateStore({
-					accountId: process.env.CLOUDFLARE_ACCOUNT_ID!,
-					apiToken: process.env.CLOUDFLARE_API_TOKEN!,
-				})
+			? (scope) =>
+					new CloudflareStateStore(scope, {
+						accountId: process.env.CLOUDFLARE_ACCOUNT_ID!,
+						apiToken: process.env.CLOUDFLARE_API_TOKEN!,
+					})
 			: undefined,
 });
 
