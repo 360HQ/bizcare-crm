@@ -3,16 +3,18 @@
   "type": "module",
   "main": "src/index.ts",
   "scripts": {
+    "dev": "bun --hot src/dev.ts",
     "build": "tsdown",
     "check-types": "tsc -b",
     "compile": "bun build --compile --minify --sourcemap --bytecode ./src/index.ts --outfile server"
   },
   "dependencies": {
     "@hono/trpc-server": "^0.4.0",
-    "@memorial-registry/api": "workspace:*",
-    "@memorial-registry/auth": "workspace:*",
-    "@memorial-registry/db": "workspace:*",
-    "@memorial-registry/env": "workspace:*",
+    "@bizcare-crm/api": "workspace:*",
+    "@bizcare-crm/auth": "workspace:*",
+    "@bizcare-crm/core": "workspace:*",
+    "@bizcare-crm/db": "workspace:*",
+    "@bizcare-crm/env": "workspace:*",
     "@trpc/server": "catalog:",
     "better-auth": "catalog:",
     "dotenv": "catalog:",
@@ -21,7 +23,7 @@
   },
   "devDependencies": {
     "@cloudflare/workers-types": "catalog:",
-    "@memorial-registry/config": "workspace:*",
+    "@bizcare-crm/config": "workspace:*",
     "@types/node": "catalog:",
     "alchemy": "catalog:",
     "tsdown": "^0.16.5",
