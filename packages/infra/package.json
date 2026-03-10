@@ -1,5 +1,5 @@
 {
-  "name": "@memorial-registry/infra",
+  "name": "@bizcare-crm/infra",
   "private": true,
   "type": "module",
   "scripts": {
@@ -12,7 +12,7 @@
     "zod": "catalog:"
   },
   "devDependencies": {
-    "@memorial-registry/config": "workspace:*",
+    "@bizcare-crm/config": "workspace:*",
     "alchemy": "catalog:",
     "typescript": "catalog:"
   }
